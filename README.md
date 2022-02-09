@@ -1,6 +1,6 @@
 # CTF - My collection of CTF writeups.
 
-<h1>What is an CTF?</h1>
+<h1>What is a CTF?</h1>
 Capture the Flag (CTF) in computer security is an exercise in which "flags" are secretly hidden in purposefully-vulnerable programs or websites. 
 Competitors steal flags either from other competitors (attack/defense-style CTFs) or from the organizers (jeopardy-style challenges).
 Several variations exist, including hiding flags in hardware devices. 
