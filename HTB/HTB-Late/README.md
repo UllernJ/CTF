@@ -24,7 +24,7 @@ Nmap done: 1 IP address (1 host up) scanned in 393.98 seconds
 
 ## Port 80
 
-<img src="https://github.com/UllernJ/LateHTB/blob/main/Skjermbilde%20fra%202022-04-28%2021-59-57.png">
+<img src="https://github.com/UllernJ/CTF/blob/main/HTB/HTB-Late/Skjermbilde%20fra%202022-04-28%2021-59-57.png">
 
 When we go around this page we'll find out that they have a subdomain called "images.late.htb/".
 <p>To access this we need to add this to our known hosts @ /etc/hosts/.
@@ -45,7 +45,7 @@ We extract the rsa key to ssh to the user without the password.
 
 ```
 
-  <img src="https://github.com/UllernJ/LateHTB/blob/main/Skjermbilde%20fra%202022-04-28%2021-58-54.png">
+  <img src="https://github.com/UllernJ/CTF/blob/main/HTB/HTB-Late/Skjermbilde%20fra%202022-04-28%2021-58-54.png">
   
 ## root
 
