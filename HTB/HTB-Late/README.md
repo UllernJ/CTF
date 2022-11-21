@@ -86,7 +86,7 @@ I create a file named date with a reverse shell:
   
 What we need to do now is just to ssh into the server agian and root will execute the ssh-alert.sh that also runs "date" (our reverseshell).
 BOOM ROOT
-<p><img src="https://github.com/UllernJ/LateHTB/blob/main/root.png">
+<p><img src="/root.png">
 
  
   
